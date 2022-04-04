@@ -3,6 +3,8 @@
     <layout-header class="layout__header"/>
 
     <layout-container>
+      <layout-sidebar class="layout__sidebar"/>
+
       <router-view />
     </layout-container>
   </div>
@@ -11,6 +13,7 @@
 <script lang="ts">
 import LayoutHeader from 'Components/layout/layout-header.vue';
 import LayoutContainer from 'Components/layout/layout-container.vue';
+import LayoutSidebar from 'Components/layout/layout-sidebar.vue';
 
 export default {
   name: 'App',
@@ -18,45 +21,22 @@ export default {
   components: {
     LayoutHeader,
     LayoutContainer,
+    LayoutSidebar,
   },
-
-  computed: {
-    count(): number {
-      return this.$store.state.count;
-    },
-  },
-
-  methods: {
-    increment() {
-      this.$store.commit('increment');
-    }
-  }
 };
 </script>
 
 <style lang="stylus">
-  @import './variables'
-
-  *,
-  *::before,
-  *::after
-    margin: 0
-    padding: 0
-    box-sizing: border-box
-    font-family: sans-serif
-
-  html,
-  body,
-  #app
-    height: 100%
-
-  #app
-    font-family: Avenir, Helvetica, Arial, 'sans-serif'
+  @import './common'
 
   .layout
     display: flex
     flex-direction: column
+    height: var(--full-size)
 
     &__header
-      border-bottom: 1px solid var(--surface-border)
+      border-bottom: 1px solid var(--border-color)
+
+    &__sidebar
+      border-right: 1px solid var(--border-color)
 </style>

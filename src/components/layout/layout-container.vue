@@ -15,12 +15,13 @@ export default {
 
 <style lang="stylus" scoped>
   .layout-container
-    width: 100%
+    width: var(--full-size)
 
     &__content
       display: flex
-      max-width: 1400px
-      width: 100%
+      max-width: var(--container-max-width)
+      width: var(--full-size)
+      height var(--full-size)
       margin: 0 auto
       padding: 0 var(--main-padding)
 </style>
