@@ -12,6 +12,5 @@ export default {
 
 <style scoped lang="stylus">
   .home
-    background-color: lightgrey
     padding: 40px
 </style>

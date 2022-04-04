@@ -24,9 +24,11 @@ module.exports = {
 		'describe': true,
 		'test': true,
 		'expect': true,
+		'require': true,
 	},
 	'rules': {
 		'@typescript-eslint/ban-ts-comment': 0,
+		'@typescript-eslint/no-var-requires': 0,
 		'vue/multi-word-component-names': 0,
 		'linebreak-style': [
 			'error',

@@ -1,35 +1,24 @@
 <template>
-  <div>
-     <img alt="Vue logo" src="./assets/logo.png" />
-     <button @click="increment">увеличить</button>
-     <div>
-       result - {{ count }}
-     </div>
+  <div class="layout">
+    <layout-header class="layout__header"/>
 
-    <input-switch v-model="checked"></input-switch> {{ checked }}
-
-    <router-link to="/">Index</router-link>
-    <br>
-    <router-link to="/home">Go to Home</router-link>
-     <router-view></router-view>
+    <layout-container>
+      <router-view />
+    </layout-container>
   </div>
 </template>
 
 <script lang="ts">
-import InputSwitch from 'primevue/inputswitch';
+import LayoutHeader from 'Components/layout/layout-header.vue';
+import LayoutContainer from 'Components/layout/layout-container.vue';
 
 export default {
   name: 'App',
 
   components: {
-    InputSwitch,
+    LayoutHeader,
+    LayoutContainer,
   },
-
-  data() {
-		return {
-			checked: true
-		};
-	},
 
   computed: {
     count(): number {
@@ -46,11 +35,28 @@ export default {
 </script>
 
 <style lang="stylus">
+  @import './variables'
+
+  *,
+  *::before,
+  *::after
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    font-family: sans-serif
+
+  html,
+  body,
+  #app
+    height: 100%
+
   #app
     font-family: Avenir, Helvetica, Arial, 'sans-serif'
-    -webkit-font-smoothing: antialiased
-    -moz-osx-font-smoothing: grayscale
-    text-align: center
-    color: #2c3e50
-    margin-top: 60px
+
+  .layout
+    display: flex
+    flex-direction: column
+
+    &__header
+      border-bottom: 1px solid var(--surface-border)
 </style>
