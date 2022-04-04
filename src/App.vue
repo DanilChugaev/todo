@@ -6,6 +6,8 @@
        result - {{ count }}
      </div>
 
+    <input-switch v-model="checked"></input-switch> {{ checked }}
+
     <router-link to="/">Index</router-link>
     <br>
     <router-link to="/home">Go to Home</router-link>
@@ -14,8 +16,20 @@
 </template>
 
 <script lang="ts">
+import InputSwitch from 'primevue/inputswitch';
+
 export default {
   name: 'App',
+
+  components: {
+    InputSwitch,
+  },
+
+  data() {
+		return {
+			checked: true
+		};
+	},
 
   computed: {
     count(): number {
