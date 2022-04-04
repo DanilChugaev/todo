@@ -2,10 +2,12 @@
   <div class="layout">
     <layout-header class="layout__header"/>
 
-    <layout-container>
+    <layout-container class="layout__container">
       <layout-sidebar class="layout__sidebar"/>
 
-      <router-view />
+      <layout-main>
+        <router-view />
+      </layout-main>
     </layout-container>
   </div>
 </template>
@@ -14,6 +16,7 @@
 import LayoutHeader from 'Components/layout/layout-header.vue';
 import LayoutContainer from 'Components/layout/layout-container.vue';
 import LayoutSidebar from 'Components/layout/layout-sidebar.vue';
+import LayoutMain from 'Components/layout/layout-main.vue';
 
 export default {
   name: 'App',
@@ -22,6 +25,7 @@ export default {
     LayoutHeader,
     LayoutContainer,
     LayoutSidebar,
+    LayoutMain,
   },
 };
 </script>
@@ -33,6 +37,9 @@ export default {
     display: flex
     flex-direction: column
     height: var(--full-size)
+
+    &__container
+      height: var(--full-size)
 
     &__header
       border-bottom: 1px solid var(--border-color)

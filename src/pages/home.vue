@@ -11,6 +11,5 @@ export default {
 </script>
 
 <style scoped lang="stylus">
-  .home
-    padding: 40px
+
 </style>
