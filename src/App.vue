@@ -45,5 +45,6 @@ export default {
       border-bottom: 1px solid var(--border-color)
 
     &__sidebar
+      // может вообще убрать эту полоску
       border-right: 1px solid var(--border-color)
 </style>

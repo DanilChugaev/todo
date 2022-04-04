@@ -1,11 +1,11 @@
 import { createRouter, createWebHistory } from 'vue-router';
 
-import Index from './pages/index.vue';
-import Home from './pages/home.vue';
+import Index from 'Pages/index.vue';
+import Todos from 'Pages/todos.vue';
 
 const routes = [
   { path: '/', component: Index },
-  { path: '/home', component: Home },
+  { path: '/todos/:id', component: Todos },
 ];
 
 const router = createRouter({

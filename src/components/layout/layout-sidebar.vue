@@ -14,5 +14,5 @@ export default {
   .layout-sidebar
     max-width: var(--sidebar-max-width)
     width: var(--full-size)
-    padding: var(--main-padding) 0
+    padding: var(--main-padding) var(--main-padding) var(--main-padding) 0
 </style>
