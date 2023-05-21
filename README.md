@@ -1,6 +1,6 @@
-# vite-vue3-ts-template
+# todo
 
-A boilerplate code for vue3 projects with typescript
+Todo list
 
 ## Contents
   - [Prerequisites](#prerequisites)
@@ -37,7 +37,7 @@ Here's an overview of the included main tools
 Clone the project
 
 ```bash
-  git clone git@github.com:DanilChugaev/vite-vue3-ts-template.git my-project
+  git clone git@github.com:DanilChugaev/todo.git my-project
 ```
 
 Go to the project directory

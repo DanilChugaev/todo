@@ -1,17 +1,15 @@
 <template>
-  <div class="home">
-    home
+  <div class="settings">
+    settings
   </div>
 </template>
 
 <script lang="ts">
 export default {
-  name: 'home',
+  name: 'settings',
 };
 </script>
 
 <style scoped lang="scss">
-  .home {
-    padding: 40px;
-  }
+  .settings {}
 </style>

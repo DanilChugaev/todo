@@ -1,17 +1,15 @@
 <template>
-  <div class="index">
-    index
+  <div class="today">
+    today
   </div>
 </template>
 
 <script lang="ts">
 export default {
-  name: 'index',
+  name: 'today',
 };
 </script>
 
 <style scoped lang="scss">
-  .index {
-    padding: 20px;
-  }
+  .today {}
 </style>
