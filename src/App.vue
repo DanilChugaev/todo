@@ -1,36 +1,32 @@
 <template>
-  <div class="app-container">
+  <div class="app">
     <layout-menu />
 
-    <router-view />
+    <main class="app__main">
+      <router-view />
+    </main>
 
     <layout-aside />
   </div>
 </template>
 
-<script lang="ts">
+<script lang="ts" setup>
 import LayoutAside from '~/components/layout/layout-aside.vue';
 import LayoutMenu from '~/components/layout/layout-menu.vue';
-
-export default {
-  name: 'App',
-
-  components: {
-    LayoutAside,
-    LayoutMenu,
-  },
-
-  setup() {
-
-    return {};
-  },
-};
 </script>
 
 <style lang="scss">
 @import "./assets/scss/index.scss";
 
-.app-container {
+.app {
+  display: flex;
+  height: 100%;
+  gap: var(--spacer-d);
   padding: var(--spacer-d);
+
+  &__main {
+    width: 100%;
+    padding: var(--spacer-d) 0;
+  }
 }
 </style>

@@ -1,15 +1,56 @@
 <template>
-  <div>
-    aside
-  </div>
+  <aside
+    :class="[
+      'layout-aside',
+      {
+        'layout-aside--is-active': isActiveAside,
+      },
+    ]"
+  >
+    <div class="layout-aside__header">
+      <h2 class="layout-aside__title">Aside</h2>
+
+      <ui-button
+        class="layout-aside__button"
+        :with-bg="false"
+        @click="closeAside"
+      >
+        <icon-close />
+      </ui-button>
+    </div>
+  </aside>
 </template>
 
-<script>
-export default {
-  name: 'layout-aside',
-};
+<script lang="ts" setup>
+import { ref } from 'vue';
+import IconClose from '~/components/ui/icons/close.vue';
+import UiButton from '~/components/ui/ui-button.vue';
+
+const isActiveAside = ref(true);
+
+function closeAside() {
+  isActiveAside.value = false;
+}
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+.layout-aside {
+  display: none;
+  padding: var(--spacer-d);
+  border-radius: var(--border-radius-c);
+  background-color: var(--color-bg-aside);
+  width: 100%;
+  max-width: var(--width-aside-active);
+  height: 100%;
 
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &--is-active {
+    display: block;
+  }
+}
 </style>

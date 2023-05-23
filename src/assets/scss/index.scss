@@ -2,9 +2,14 @@
 
 html,
 body {
-    height: 100%;
     color: var(--color-text);
     background-color: var(--color-bg-main);
+}
+
+html,
+body,
+#app {
+    height: 100%;
 }
 
 * {
