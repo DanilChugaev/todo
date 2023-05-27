@@ -18,16 +18,45 @@
         <icon-menu />
       </ui-button>
     </div>
+
+    <div class="layout-menu__content">
+      content
+    </div>
+
+    <layout-list
+      class="layout-menu__footer"
+      :items="footerLinks"
+    />
   </aside>
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue';
+import { computed, ref } from 'vue';
 import IconMenu from '~/components/ui/icons/menu.vue';
 import UiButton from '~/components/ui/ui-button.vue';
+import LayoutList from './layout-list.vue';
 
 const IS_ACTIVE_MENU = 'isActiveMenu';
 const isActiveMenu = ref(localStorage.getItem(IS_ACTIVE_MENU) === 'true' ?? true);
+
+const footerLinks = computed(() => [
+  {
+    text: 'upcoming',
+    to: '/',
+  },
+  {
+    text: 'today',
+    to: '/today',
+  },
+  {
+    text: 'settings',
+    to: '/settings',
+  },
+  {
+    text: 'about system',
+    to: '/settings',
+  },
+]);
 
 function toggleMenu() {
   isActiveMenu.value = !isActiveMenu.value;
@@ -38,6 +67,8 @@ function toggleMenu() {
 
 <style lang="scss" scoped>
 .layout-menu {
+  display: flex;
+  flex-direction: column;
   padding: var(--spacer-d);
   border-radius: var(--border-radius-c);
   min-width: var(--width-menu-initial);
@@ -49,8 +80,14 @@ function toggleMenu() {
     justify-content: center;
   }
 
-  &__title {
+  &__title,
+  &__content,
+  &__footer {
     display: none;
+  }
+
+  &__footer {
+    margin-top: auto;
   }
 
   &--is-active {
@@ -58,12 +95,16 @@ function toggleMenu() {
     width: 100%;
     max-width: var(--width-menu-active);
 
-    .layout-menu__title {
-      display: block;
-    }
+    .layout-menu {
+      &__title,
+      &__content,
+      &__footer {
+        display: block;
+      }
 
-    .layout-menu__header {
-      justify-content: space-between;
+      &__header {
+        justify-content: space-between;
+      }
     }
   }
 }
