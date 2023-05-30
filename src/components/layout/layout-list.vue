@@ -38,7 +38,6 @@
 
 <script lang="ts" setup>
 import { PropType } from 'vue';
-import UiLink from '~/components/ui/ui-link.vue';
 import { LayoutListItem } from './types';
 
 defineProps({

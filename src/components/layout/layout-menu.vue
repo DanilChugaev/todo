@@ -32,8 +32,6 @@
 
 <script lang="ts" setup>
 import { computed, ref } from 'vue';
-import IconMenu from '~/components/ui/icons/menu.vue';
-import UiButton from '~/components/ui/ui-button.vue';
 import LayoutList from './layout-list.vue';
 
 const IS_ACTIVE_MENU = 'isActiveMenu';
@@ -51,6 +49,7 @@ const footerLinks = computed(() => [
   {
     text: 'settings',
     to: '/settings',
+    icon: 'icon-settings'
   },
   {
     text: 'about system',

@@ -23,8 +23,6 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue';
-import IconClose from '~/components/ui/icons/close.vue';
-import UiButton from '~/components/ui/ui-button.vue';
 
 const isActiveAside = ref(true);
 
