@@ -1,7 +1,7 @@
 <template>
   <router-link
     class="ui-link"
-    :to="to"
+    :to="$basePath + to"
   >
     <slot name="icon" />
 
