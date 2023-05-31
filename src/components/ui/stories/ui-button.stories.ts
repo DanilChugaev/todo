@@ -6,7 +6,7 @@ const meta = {
   title: 'ui/button',
 
   component: UiButton,
-  
+
   argTypes: {
     type: {
       options: ['button', 'submit'],
@@ -23,7 +23,7 @@ const meta = {
       return { args };
     },
 
-    template: '<ui-button :type="args.type" :disabled="args.disabled">Супер кнопка</ui-button>',
+    template: '<ui-button v-bind="args">Супер кнопка</ui-button>',
   }),
 
   tags: ['autodocs'],

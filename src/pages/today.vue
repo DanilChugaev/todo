@@ -4,10 +4,7 @@
   </div>
 </template>
 
-<script lang="ts">
-export default {
-  name: 'today',
-};
+<script lang="ts" setup>
 </script>
 
 <style scoped lang="scss">

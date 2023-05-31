@@ -47,6 +47,10 @@ function closeAside() {
     justify-content: space-between;
   }
 
+  &__title {
+    font-size: 24px;
+  }
+
   &--is-active {
     display: block;
   }

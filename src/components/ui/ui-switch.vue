@@ -13,20 +13,10 @@
     </label>
 </template>
 
-<script lang="ts">
-import IconMoon from '~/components/icons/moon.vue';
-
-export default {
-  name: 'ui-switch',
-
-  components: {
-      IconMoon,
-  },
-
-  props: {
+<script lang="ts" setup>
+defineProps({
     modelValue: Boolean,
-  },
-};
+});
 </script>
 
 

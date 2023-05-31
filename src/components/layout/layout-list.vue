@@ -1,12 +1,5 @@
 <template>
-  <div class="layout-list">
-    <h3
-      v-if="title"
-      class="layout-list__title"
-    >
-      {{ title }}
-    </h3>
-
+  <list-wrapper class="layout-list" :title="title">
     <ul class="layout-list__container">
       <li
         v-for="item in items"
@@ -14,31 +7,34 @@
         class="layout-list__item item"
       >
         <ui-link :to="item.to">
-          <component
-            v-if="item.icon"
-            slot="icon"
-            :is="item.icon"
-            class="item__icon"
-          />
+          <template #icon>
+            <component
+              v-if="item.icon"
+              :is="item.icon"
+              class="item__icon"
+            />
+          </template>
 
           {{ item.text }}
 
-          <span
-            v-if="item.counter"
-            slot="counter"
-            class="item__counter"
-          >
-            {{ item.counter }}
-          </span>
+          <template #counter>
+            <span
+              v-if="item.counter"
+              class="item__counter"
+            >
+              {{ item.counter }}
+            </span>
+          </template>
         </ui-link>
       </li>
     </ul>
-  </div>
+  </list-wrapper>
 </template>
 
 <script lang="ts" setup>
 import { PropType } from 'vue';
 import { LayoutListItem } from './types';
+import ListWrapper from '~/components/list-wrapper.vue';
 
 defineProps({
   title: {
@@ -67,7 +63,13 @@ defineProps({
   }
 
   .item {
+    list-style: none;
+
     &__icon {
+
+    }
+
+    &__counter {
 
     }
   }

@@ -20,13 +20,18 @@
     </div>
 
     <div class="layout-menu__content">
-      content
+      <layout-list
+        class="layout-menu__footer"
+        title="tasks"
+        :items="tasksLinks"
+      />
     </div>
 
-    <layout-list
-      class="layout-menu__footer"
-      :items="footerLinks"
-    />
+    <div class="layout-menu__footer">
+      <layout-list
+        :items="footerLinks"
+      />
+    </div>
   </aside>
 </template>
 
@@ -37,23 +42,27 @@ import LayoutList from './layout-list.vue';
 const IS_ACTIVE_MENU = 'isActiveMenu';
 const isActiveMenu = ref(localStorage.getItem(IS_ACTIVE_MENU) === 'true' ?? true);
 
-const footerLinks = computed(() => [
+const tasksLinks = computed(() => [
   {
-    text: 'upcoming',
+    text: 'Upcoming',
     to: '/',
   },
   {
-    text: 'today',
+    text: 'Today',
     to: '/today',
+    counter: 12,
+  },
+]);
+const footerLinks = computed(() => [
+  {
+    text: 'Settings',
+    to: '/settings',
+    icon: 'icon-settings',
   },
   {
-    text: 'settings',
-    to: '/settings',
-    icon: 'icon-settings'
-  },
-  {
-    text: 'about system',
-    to: '/settings',
+    text: 'Info',
+    to: '/Info',
+    icon: 'icon-info',
   },
 ]);
 
@@ -77,6 +86,14 @@ function toggleMenu() {
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+  &__title {
+    font-size: 24px;
+  }
+
+  &__content {
+    margin-top: var(--spacer-d);
   }
 
   &__title,

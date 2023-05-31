@@ -4,7 +4,7 @@ type HTMLElementEvent<T extends HTMLInputElement> = Event & {
 
 export default () => {
   const useDark: MediaQueryList = window.matchMedia('(prefers-color-scheme: dark)');
-  const isDark: boolean = getDarkModeFromLocalStorage() === null
+  let isDark: boolean = getDarkModeFromLocalStorage() === null
     ? useDark.matches
     : getDarkModeFromLocalStorage() === 'true';
 
@@ -18,6 +18,7 @@ export default () => {
   return (event: HTMLElementEvent<HTMLInputElement>): void | boolean => {
     if (event) {
       toggleDarkModeClass(event.target.checked);
+      isDark = event.target.checked;
     } else {
       return isDark;
     }

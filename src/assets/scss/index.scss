@@ -20,11 +20,3 @@ body,
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-
-a {
-    color: var(--color-link);
-
-    &:hover {
-        color: var(--color-link-hover);
-    }
-}
