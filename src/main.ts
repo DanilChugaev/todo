@@ -15,7 +15,7 @@ app.provide('toggleDarkMode', toggleDarkMode());
 app.directive(VFocus.name, VFocus);
 
 components.forEach(component => {
-  app.component((component?.__file?.split('/').pop() as string).replace('.vue', ''), component);
+  app.component(component.name, component.component);
 });
 
 app

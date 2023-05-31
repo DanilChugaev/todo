@@ -11,12 +11,28 @@ import IconMoon from '~/components/ui/icons/icon-moon.vue';
 import IconSettings from '~/components/ui/icons/icon-settings.vue';
 
 export default [
-  UiButton,
-  UiLink,
-  // UiInput,
-  // UiSwitch,
-  IconClose,
-  IconMenu,
-  IconMoon,
-  IconSettings,
+  {
+    name: 'ui-button',
+    component: UiButton,
+  },
+  {
+    name: 'ui-link',
+    component: UiLink,
+  },
+  {
+    name: 'icon-close',
+    component: IconClose,
+  },
+  {
+    name: 'icon-menu',
+    component: IconMenu,
+  },
+  {
+    name: 'icon-moon',
+    component: IconMoon,
+  },
+  {
+    name: 'icon-settings',
+    component: IconSettings,
+  },
 ];
