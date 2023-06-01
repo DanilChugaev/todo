@@ -6,7 +6,11 @@
         :key="item.id"
         class="layout-list__item item"
       >
-        <ui-link class="layout-list__link" :to="item.to">
+        <ui-link
+          class="layout-list__link"
+          :to="item.to"
+          :counter="item.counter"
+        >
           <template #icon>
             <component
               v-if="item.icon"
@@ -16,15 +20,6 @@
           </template>
 
           {{ item.text }}
-
-          <template #counter>
-            <span
-              v-if="item.counter"
-              class="item__counter"
-            >
-              {{ item.counter }}
-            </span>
-          </template>
         </ui-link>
       </li>
     </ul>
@@ -76,10 +71,6 @@ defineProps({
     list-style: none;
 
     &__icon {
-
-    }
-
-    &__counter {
 
     }
   }

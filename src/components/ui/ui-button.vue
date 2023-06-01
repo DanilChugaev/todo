@@ -47,6 +47,7 @@ html.dark-mode {
 
 <style scoped lang="scss">
 .ui-button {
+  display: flex;
   padding: var(--spacer-b) var(--spacer-c);
   background: none;
   border: none;

@@ -26,7 +26,7 @@ import LayoutMenu from '~/components/layout/layout-menu.vue';
 
   &__main {
     width: 100%;
-    padding: var(--spacer-d) 0;
+    padding: var(--spacer-c) 0;
   }
 }
 </style>

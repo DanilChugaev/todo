@@ -16,20 +16,24 @@
       <slot />
     </span>
 
-    <span v-if="hasCounterSlot" class="ui-link__counter">
-      <slot name="counter" />
+    <span v-if="counter" class="ui-link__counter">
+      {{ counter }}
     </span>
   </router-link>
 </template>
 
 <script lang="ts" setup>
-import { useSlots, computed } from 'vue';
+import { useSlots, computed, PropType } from 'vue';
 import { useRoute } from 'vue-router';
 
 const props = defineProps({
   to: {
     type: String,
     required: true,
+  },
+  counter: {
+    type: [Number, undefined] as PropType<number | undefined>,
+    default: undefined,
   },
 });
 
@@ -39,7 +43,6 @@ const route = useRoute();
 const isActive = computed(() => route.path.split('/').pop() === props.to.split('/').pop());
 
 const hasIconSlot = slots.icon?.()[0].props;
-const hasCounterSlot = slots.counter?.()[0].props;
 </script>
 
 <style>
