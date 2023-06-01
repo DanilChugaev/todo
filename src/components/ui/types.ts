@@ -1,4 +1,4 @@
-export interface LayoutListItem {
+export interface UiListItem {
   icon?: string;
   text: string;
   to: string;

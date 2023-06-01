@@ -7,28 +7,25 @@
       },
     ]"
   >
-    <div class="layout-menu__header">
-      <h2 class="layout-menu__title">Menu</h2>
-
-      <ui-button
-        class="layout-menu__button"
-        :with-bg="false"
-        @click="toggleMenu"
-      >
-        <icon-menu />
-      </ui-button>
-    </div>
+    <aside-header
+      title="Menu"
+      :is-active-title="isActiveMenu"
+      @click="toggleMenu"
+    >
+      <icon-menu />
+    </aside-header>
 
     <div class="layout-menu__content">
-      <layout-list
-        class="layout-menu__footer"
+      <ui-list
+        class="layout-menu__list"
         title="tasks"
         :items="tasksLinks"
       />
     </div>
 
     <div class="layout-menu__footer">
-      <layout-list
+      <ui-list
+        class="layout-menu__list"
         :items="footerLinks"
       />
     </div>
@@ -37,7 +34,8 @@
 
 <script lang="ts" setup>
 import { computed, ref } from 'vue';
-import LayoutList from './layout-list.vue';
+import UiList from '~/components/ui/ui-list.vue';
+import AsideHeader from './components/aside-header.vue';
 
 const IS_ACTIVE_MENU = 'isActiveMenu';
 const isActiveMenu = ref(localStorage.getItem(IS_ACTIVE_MENU) === 'true' ?? true);
@@ -82,21 +80,10 @@ function toggleMenu() {
   min-width: var(--width-menu-initial);
   height: 100%;
 
-  &__header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  &__title {
-    font-size: 24px;
-  }
-
   &__content {
     margin-top: var(--spacer-d);
   }
 
-  &__title,
   &__content,
   &__footer {
     display: none;
@@ -112,7 +99,6 @@ function toggleMenu() {
     max-width: var(--width-menu-active);
 
     .layout-menu {
-      &__title,
       &__content,
       &__footer {
         display: block;

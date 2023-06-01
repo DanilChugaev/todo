@@ -33,8 +33,8 @@
 
 <script lang="ts" setup>
 import { PropType } from 'vue';
-import { LayoutListItem } from './types';
-import ListWrapper from '~/components/list-wrapper.vue';
+import { UiListItem } from './types';
+import ListWrapper from './components/list-wrapper.vue';
 
 defineProps({
   title: {
@@ -42,7 +42,7 @@ defineProps({
     default: '',
   },
   items: {
-    type: Array as PropType<LayoutListItem[]>,
+    type: Array as PropType<UiListItem[]>,
     required: true,
   },
 });

@@ -7,22 +7,15 @@
       },
     ]"
   >
-    <div class="layout-aside__header">
-      <h2 class="layout-aside__title">Aside</h2>
-
-      <ui-button
-        class="layout-aside__button"
-        :with-bg="false"
-        @click="closeAside"
-      >
-        <icon-close />
-      </ui-button>
-    </div>
+    <aside-header title="Aside" @click="closeAside">
+      <icon-close />
+    </aside-header>
   </aside>
 </template>
 
 <script lang="ts" setup>
 import { ref } from 'vue';
+import AsideHeader from './components/aside-header.vue';
 
 const isActiveAside = ref(true);
 
