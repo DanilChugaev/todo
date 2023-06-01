@@ -24,7 +24,6 @@ defineProps({
 .list-wrapper {
   &__title {
     font-size: 18px;
-    text-transform: uppercase;
     margin-bottom: var(--spacer-c);
   }
 }

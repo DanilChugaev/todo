@@ -18,7 +18,7 @@
     <div class="layout-menu__content">
       <ui-list
         class="layout-menu__list"
-        title="tasks"
+        title="Tasks"
         :items="tasksLinks"
       />
     </div>
