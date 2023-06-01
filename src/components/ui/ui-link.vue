@@ -23,20 +23,20 @@
 </template>
 
 <script lang="ts" setup>
-import {useSlots, ref, computed} from 'vue';
+import { useSlots, computed } from 'vue';
 import { useRoute } from 'vue-router';
 
 const props = defineProps({
   to: {
     type: String,
-    default: '',
+    required: true,
   },
 });
 
 const slots = useSlots();
 const route = useRoute();
 
-const isActive = computed(() => route.path === props.to);
+const isActive = computed(() => route.path.split('/').pop() === props.to.split('/').pop());
 
 const hasIconSlot = slots.icon?.()[0].props;
 const hasCounterSlot = slots.counter?.()[0].props;

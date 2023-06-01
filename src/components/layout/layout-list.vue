@@ -6,7 +6,7 @@
         :key="item.id"
         class="layout-list__item item"
       >
-        <ui-link :to="item.to">
+        <ui-link class="layout-list__link" :to="item.to">
           <template #icon>
             <component
               v-if="item.icon"
@@ -48,6 +48,12 @@ defineProps({
 });
 </script>
 
+<style>
+:root {
+  --height-layout-list-link: 45px;
+}
+</style>
+
 <style lang="scss" scoped>
 .layout-list {
   &__title {
@@ -60,6 +66,10 @@ defineProps({
 
   &__item {
 
+  }
+
+  &__link {
+    height: var(--height-layout-list-link);
   }
 
   .item {
