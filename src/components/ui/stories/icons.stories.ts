@@ -13,6 +13,7 @@ const meta = {
       <icon-menu></icon-menu>
       <icon-moon></icon-moon>
       <icon-settings></icon-settings>
+      <icon-check></icon-check>
     `,
   }),
 } satisfies Meta;

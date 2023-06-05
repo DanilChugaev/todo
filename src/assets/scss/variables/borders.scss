@@ -2,4 +2,14 @@
   --border-radius-a: 5px;
   --border-radius-b: 10px;
   --border-radius-c: 15px;
+
+  --color-border: rgb(162, 163, 164);
+  --color-border-hover: rgb(39, 39, 49);
+  --color-border-active: rgb(31,35,40);
+}
+
+html.dark-mode {
+  --color-border: #4a555d;
+  --color-border-hover: #768390;
+  --color-border-active: #636e7b;
 }

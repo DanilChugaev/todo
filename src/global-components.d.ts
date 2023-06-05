@@ -10,6 +10,7 @@ import IconMenu from '~/components/ui/icons/icon-menu.vue';
 import IconMoon from '~/components/ui/icons/icon-moon.vue';
 import IconSettings from '~/components/ui/icons/icon-settings.vue';
 import IconInfo from '~/components/ui/icons/icon-Iifo.vue';
+import IconCheck from '~/components/ui/icons/icon-check.vue';
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
@@ -21,5 +22,6 @@ declare module '@vue/runtime-core' {
     IconMoon: typeof IconMoon,
     IconSettings: typeof IconSettings,
     IconInfo: typeof IconInfo,
+    IconCheck: typeof IconCheck,
   }
 }

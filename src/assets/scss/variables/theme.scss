@@ -5,9 +5,7 @@
 
     --color-text: #1F2328;
 
-    --color-border: rgb(216, 222, 228);
-    --color-border-hover: rgba(31,35,40,0.15);
-    --color-border-active: rgba(31,35,40,0.15);
+    --color-outline: rgb(25, 89, 204);
 }
 
 html.dark-mode {
@@ -16,8 +14,4 @@ html.dark-mode {
     --color-bg-aside: var(--color-bg-menu);
 
     --color-text: #adbac7;
-
-    --color-border: #373e47;
-    --color-border-hover: #768390;
-    --color-border-active: #636e7b;
 }

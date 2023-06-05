@@ -10,6 +10,7 @@ import IconMenu from '~/components/ui/icons/icon-menu.vue';
 import IconMoon from '~/components/ui/icons/icon-moon.vue';
 import IconSettings from '~/components/ui/icons/icon-settings.vue';
 import IconInfo from '~/components/ui/icons/icon-info.vue';
+import IconCheck from '~/components/ui/icons/icon-check.vue';
 
 export default [
   { name: 'ui-button', component: UiButton },
@@ -20,4 +21,5 @@ export default [
   { name: 'icon-moon', component: IconMoon },
   { name: 'icon-settings', component: IconSettings },
   { name: 'icon-info', component: IconInfo },
+  { name: 'icon-check', component: IconCheck },
 ];
