@@ -1,13 +1,13 @@
 <template>
-  <list-wrapper class="layout-list" :title="title">
-    <ul class="layout-list__container">
+  <list-wrapper class="ui-list" :title="title">
+    <ul class="ui-list__container">
       <li
         v-for="item in items"
         :key="item.id"
-        class="layout-list__item item"
+        class="ui-list__item item"
       >
         <ui-link
-          class="layout-list__link"
+          class="ui-list__link"
           :to="item.to"
           :counter="item.counter"
         >
@@ -45,12 +45,12 @@ defineProps({
 
 <style>
 :root {
-  --height-layout-list-link: 45px;
+  --height-ui-list-link: 45px;
 }
 </style>
 
 <style lang="scss" scoped>
-.layout-list {
+.ui-list {
   &__title {
 
   }
@@ -64,7 +64,7 @@ defineProps({
   }
 
   &__link {
-    height: var(--height-layout-list-link);
+    height: var(--height-ui-list-link);
   }
 
   .item {
