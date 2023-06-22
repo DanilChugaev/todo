@@ -24,6 +24,13 @@ function closeAside() {
 }
 </script>
 
+<style>
+:root {
+  --width-aside-active: 600px;
+  --width-aside-initial: 0;
+}
+</style>
+
 <style scoped lang="scss">
 .layout-aside {
   display: none;

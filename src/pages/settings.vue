@@ -11,15 +11,12 @@
     <ui-checkbox v-model="isChecked5" style="margin-top: 30px"/>
     <ui-checkbox v-model="isChecked6" style="margin-top: 30px"/>
     <ui-checkbox v-model="isChecked7" style="margin-top: 30px"/>
-    <ui-checkbox v-model="isChecked8" style="margin-top: 30px"/>
-    {{isChecked}}
   </div>
 </template>
 
 <script lang="ts" setup>
 import { inject, ref, onMounted } from 'vue';
 import LayoutHeader from '~/components/layout/layout-header.vue';
-import UiCheckbox from '../components/ui/ui-checkbox.vue';
 
 const toggleDarkMode = inject('toggleDarkMode');
 const isDark = ref(null);

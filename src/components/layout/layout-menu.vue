@@ -34,7 +34,6 @@
 
 <script lang="ts" setup>
 import { computed, ref } from 'vue';
-import UiList from '~/components/ui/ui-list.vue';
 import AsideHeader from './components/aside-header.vue';
 
 const IS_ACTIVE_MENU = 'isActiveMenu';
@@ -70,6 +69,13 @@ function toggleMenu() {
   localStorage.setItem(IS_ACTIVE_MENU, isActiveMenu.value.toString());
 }
 </script>
+
+<style>
+:root {
+  --width-menu-active: 400px;
+  --width-menu-initial: 94px;
+}
+</style>
 
 <style lang="scss" scoped>
 .layout-menu {

@@ -1,14 +1,14 @@
 import type { Meta, StoryObj } from '@storybook/vue3';
 
-import UiCheckbox from '../ui-checkbox.vue';
+import UiSwitch from './ui-switch.vue';
 
 const meta = {
-  title: 'ui/checkbox',
+  title: 'ui/switch',
 
-  component: UiCheckbox,
+  component: UiSwitch,
 
   render: (args: any) => ({
-    components: { UiCheckbox },
+    components: { UiSwitch },
 
     setup() {
       return { args };
@@ -16,14 +16,14 @@ const meta = {
 
     template: `
       <div>
-        <ui-checkbox v-model="args.value" />
+        <ui-switch v-model="args.value" />
         {{ args.value }}
       </div>
     `,
   }),
 
   tags: ['autodocs'],
-} satisfies Meta<typeof UiCheckbox>;
+} satisfies Meta<typeof UiSwitch>;
 
 type Story = StoryObj<typeof meta>;
 

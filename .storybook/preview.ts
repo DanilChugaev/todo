@@ -1,7 +1,7 @@
 import { RouterLink } from 'vue-router';
 import { Preview, setup } from '@storybook/vue3';
 import '../src/assets/scss/index.scss';
-import components from '../src/components/ui';
+import components from '../src/components';
 import Router from '../src/router';
 
 const preview: Preview = {

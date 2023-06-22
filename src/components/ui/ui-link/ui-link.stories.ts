@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/vue3';
 
-import UiLink from '../ui-link.vue';
+import UiLink from './ui-link.vue';
 
 const meta = {
   title: 'ui/link',

@@ -1,14 +1,14 @@
 import { mount } from '@vue/test-utils';
-import UiButton from '~/components/ui-button.vue';
+import UiButton from './ui-button.vue';
 
 describe('UiButton', () => {
     test('renders component', () => {
         expect(UiButton).toBeTruthy();
-    
+
         const type = 'submit';
         const disabled = true;
         const text = 'Кнопка';
-    
+
         const wrapper = mount(UiButton, {
             props:{
                 type,
@@ -18,7 +18,7 @@ describe('UiButton', () => {
                 default: text,
             },
         });
-    
+
         expect(wrapper.text()).toContain('');
         expect(wrapper.classes('ui-button')).toBe(true);
         expect(wrapper.attributes('type')).toEqual(type);

@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/vue3';
 
-import UiInput from '../ui-input.vue';
+import UiInput from './ui-input.vue';
 
 const meta = {
   title: 'ui/input',
