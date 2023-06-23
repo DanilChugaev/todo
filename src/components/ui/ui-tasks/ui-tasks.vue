@@ -1,6 +1,8 @@
 <template>
-  <div>
-
+  <div class="ui-tasks">
+    <ui-button class="ui-tasks__new-task">
+      Add new task
+    </ui-button>
   </div>
 </template>
 
@@ -16,6 +18,10 @@ defineProps({
 });
 </script>
 
-<style scoped>
-
+<style lang="scss" scoped>
+.ui-tasks {
+  &__new-task {
+    width: 100%;
+  }
+}
 </style>

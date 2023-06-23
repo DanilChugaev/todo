@@ -1,6 +1,8 @@
 <template>
   <div class="today">
     <layout-header title="Today" :counter="10"/>
+
+    <ui-tasks></ui-tasks>
   </div>
 </template>
 
