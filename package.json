@@ -10,7 +10,8 @@
     "prepare": "husky install",
     "test": "vitest --dom",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "sprite": "node src/tools/sprite-generator.js"
   },
   "dependencies": {
     "pinia": "^2.0.34",
@@ -39,6 +40,7 @@
     "react-dom": "^18.2.0",
     "sass": "^1.62.0",
     "storybook": "^7.0.6",
+    "svgstore": "^3.0.1",
     "typescript": "^5.0.4",
     "vite": "^4.2.1",
     "vitest": "^0.30.1",

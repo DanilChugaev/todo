@@ -8,7 +8,7 @@
     ]"
   >
     <aside-header title="Aside" @click="closeAside">
-      <icon-close />
+      <ui-icon name="close" />
     </aside-header>
   </aside>
 </template>

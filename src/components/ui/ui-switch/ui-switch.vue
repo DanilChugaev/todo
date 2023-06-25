@@ -8,7 +8,7 @@
         />
 
         <span class="ui-switch__slider">
-            <icon-moon class="ui-switch__icon" />
+            <ui-icon name="moon" class="ui-switch__icon" />
         </span>
     </label>
 </template>

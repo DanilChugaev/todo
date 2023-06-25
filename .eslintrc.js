@@ -16,7 +16,8 @@ module.exports = {
     'defineProps': true,
     'describe': true,
     'test': true,
-    'expect': true
+    'expect': true,
+    'require': true
   },
   'rules': {
     '@typescript-eslint/ban-ts-comment': 0,

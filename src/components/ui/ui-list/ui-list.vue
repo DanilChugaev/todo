@@ -12,9 +12,9 @@
           :counter="item.counter"
         >
           <template #icon>
-            <component
+            <ui-icon
               v-if="item.icon"
-              :is="item.icon"
+              :name="item.icon"
               class="item__icon"
             />
           </template>

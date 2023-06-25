@@ -7,7 +7,7 @@
       :value="value"
       :disabled="disabled"
     >
-    <icon-check class="ui-checkbox__icon" />
+    <ui-icon name="check" class="ui-checkbox__icon" />
   </label>
 </template>
 

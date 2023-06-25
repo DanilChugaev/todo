@@ -28,7 +28,7 @@ const meta = {
         <ui-link v-bind="args">${args.default}</ui-link>
         <ui-link v-bind="args">
           <template #icon>
-            <icon-close></icon-close>
+            <ui-icon name="close" />
           </template>
           
           ${args.default}

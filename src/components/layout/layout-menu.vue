@@ -12,7 +12,7 @@
       :is-active-title="isActiveMenu"
       @click="toggleMenu"
     >
-      <icon-menu />
+      <ui-icon name="menu" />
     </aside-header>
 
     <div class="layout-menu__content">
@@ -54,12 +54,12 @@ const footerLinks = computed(() => [
   {
     text: 'Settings',
     to: '/settings',
-    icon: 'icon-settings',
+    icon: 'settings',
   },
   {
     text: 'Info',
     to: '/Info',
-    icon: 'icon-info',
+    icon: 'info',
   },
 ]);
 
