@@ -1,6 +1,10 @@
 <template>
   <div class="ui-tasks">
-    <ui-button class="ui-tasks__new-task">
+    <ui-button
+      class="ui-tasks__new-task"
+      size="large"
+      icon="plus"
+    >
       Add new task
     </ui-button>
   </div>

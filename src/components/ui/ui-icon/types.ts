@@ -4,5 +4,6 @@ export enum IconTypes {
   info = 'info',
   menu = 'menu',
   moon = 'moon',
+  plus = 'plus',
   settings = 'settings',
 }

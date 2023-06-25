@@ -10,6 +10,7 @@
     <ui-button
       class="aside-header__button"
       :with-bg="false"
+      size="medium"
       @click="$emit('click')"
     >
       <slot></slot>

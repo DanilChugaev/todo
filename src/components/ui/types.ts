@@ -4,3 +4,9 @@ export interface UiListItem {
   to: string;
   counter?: number;
 }
+
+export enum UiSize {
+  small = 'small',
+  medium = 'medium',
+  large = 'large',
+}

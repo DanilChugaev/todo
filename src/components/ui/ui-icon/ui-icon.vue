@@ -24,7 +24,7 @@ const props = defineProps({
 const iconPath = computed<string>(() => `${sprite}#${props.name}`);
 </script>
 
-<style scoped>
+<style>
 .ui-icon {
   display: inline-block;
   width: 1em;

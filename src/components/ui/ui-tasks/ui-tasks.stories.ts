@@ -13,7 +13,7 @@ const meta: Meta<typeof UiTasks> = {
       return { args };
     },
     template: `
-      <div style="width: 1000px">
+      <div style="width: 1000px; padding: 20px;">
         <ui-tasks v-bind="args"></ui-tasks>
       </div>
     `,
