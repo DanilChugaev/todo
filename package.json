@@ -40,7 +40,6 @@
     "react-dom": "^18.2.0",
     "sass": "^1.62.0",
     "storybook": "^7.0.6",
-    "svgstore": "^3.0.1",
     "typescript": "^5.0.4",
     "vite": "^4.2.1",
     "vitest": "^0.30.1",
