@@ -43,4 +43,8 @@ defineProps({
     font-size: 24px;
   }
 }
+
+.ui-button.aside-header__button {
+  padding: var(--spacer-b);
+}
 </style>

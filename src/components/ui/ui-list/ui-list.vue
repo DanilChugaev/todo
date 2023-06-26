@@ -51,28 +51,8 @@ defineProps({
 
 <style lang="scss" scoped>
 .ui-list {
-  &__title {
-
-  }
-
-  &__container {
-
-  }
-
-  &__item {
-
-  }
-
   &__link {
     height: var(--height-ui-list-link);
-  }
-
-  .item {
-    list-style: none;
-
-    &__icon {
-
-    }
   }
 }
 </style>

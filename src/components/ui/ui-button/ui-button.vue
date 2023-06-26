@@ -49,7 +49,7 @@ defineProps({
 :root {
   --color-bg-button: var(--color-bg-main);
   --color-bg-button-hover: rgb(235, 235, 235);
-  --color-bg-button-active: hsla(220,14%,93%,1);
+  --color-bg-button-active: hsl(225, 6%, 87%);
 }
 html.dark-mode {
   --color-bg-button: var(--color-bg-main);
@@ -67,7 +67,6 @@ html.dark-mode {
   background: none;
   border: none;
   color: var(--color-text);
-  border-radius: var(--border-radius-a);
   cursor: pointer;
 
   &--with-bg {
@@ -79,6 +78,7 @@ html.dark-mode {
     font-size: var(--font-size-ui-size-small);
     height: var(--height-ui-size-small);
     padding: var(--spacer-a) var(--spacer-b);
+    border-radius: var(--border-radius-a);
 
     .ui-button__icon {
       margin-right: var(--spacer-a);
@@ -93,6 +93,7 @@ html.dark-mode {
     font-size: var(--font-size-ui-size-medium);
     height: var(--height-ui-size-medium);
     padding: var(--spacer-b) var(--spacer-c);
+    border-radius: var(--border-radius-a);
 
     .ui-button__icon {
       margin-right: var(--spacer-b);
@@ -107,6 +108,7 @@ html.dark-mode {
     font-size: var(--font-size-ui-size-large);
     height: var(--height-ui-size-large);
     padding: var(--spacer-c) var(--spacer-d);
+    border-radius: var(--border-radius-b);
 
     .ui-button__icon {
       margin-right: var(--spacer-c);
