@@ -11,7 +11,7 @@
     "test": "vitest --dom",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "sprite": "node src/tools/sprite-generator.js"
+    "sprite": "node tools/sprite-generator.js"
   },
   "dependencies": {
     "pinia": "^2.0.34",

@@ -2,9 +2,9 @@
 const fs = require('fs');
 const path = require('node:path');
 
-const iconsDir = path.resolve(__dirname, '../assets/img/svg');
-const outputSpriteDir = path.resolve(__dirname, '../assets/img/sprite.svg');
-const outputTypesDir = path.resolve(__dirname, '../components/ui/ui-icon/types.ts');
+const iconsDir = path.resolve(__dirname, '../src/assets/img/svg');
+const outputSpriteDir = path.resolve(__dirname, '../src/assets/img/sprite.svg');
+const outputTypesDir = path.resolve(__dirname, '../src/components/ui/ui-icon/types.ts');
 const icons = fs.readdirSync(iconsDir);
 const iconTypes = [];
 
