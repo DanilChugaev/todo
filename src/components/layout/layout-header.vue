@@ -2,9 +2,12 @@
   <div class="layout-header">
     <h1 class="layout-header__title">{{ title }}</h1>
 
-    <span v-if="counter" class="layout-header__counter">
-      {{ counter }}
-    </span>
+    <ui-counter
+      v-if="counter"
+      class="layout-header__counter"
+      size="large"
+      :counter="counter"
+    />
   </div>
 </template>
 
@@ -34,10 +37,6 @@ defineProps({
   }
 
   &__counter {
-    font-size: 40px;
-    padding: var(--spacer-b);
-    border: 1px solid var(--color-border);
-    border-radius: var(--border-radius-b);
     margin-left: var(--spacer-f);
   }
 }

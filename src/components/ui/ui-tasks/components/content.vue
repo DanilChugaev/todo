@@ -16,14 +16,13 @@
       </li>
 
       <li v-if="item.date" class="info__item">
-        <ui-icon class="info__visual info__visual--icon" name="calendar"/>
+        <ui-icon class="info__visual info__visual--calendar" name="calendar"/>
 
         <span class="info__title">{{ item.date }}</span>
       </li>
 
       <li v-if="item.subtasks?.length" class="info__item">
-        <!-- тут компонент counter будет -->
-        <span class="info__visual">{{ item.subtasks.length }}</span>
+        <ui-counter class="info__visual info__visual--counter" :counter="item.subtasks.length" />
 
         <span class="info__title">Subtasks</span>
       </li>
@@ -97,9 +96,13 @@ const hasInfo = computed(() =>
   &__visual {
     margin-right: var(--spacer-a);
 
-    &--icon {
+    &--calendar {
       position: relative;
       top: -1px;
+    }
+
+    &--counter {
+      margin-right: var(--spacer-b);
     }
   }
 }

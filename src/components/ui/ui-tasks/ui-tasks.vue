@@ -61,9 +61,18 @@ defineEmits(['addTask']);
     align-items: flex-start;
     position: relative;
     padding: var(--spacer-c) var(--spacer-d);
+    cursor: pointer;
 
     & + .list__item {
       border-top: 1px solid var(--color-border)
+    }
+
+    &:hover {
+      background-color: var(--color-bg-button-hover);
+
+      & ::v-deep(.ui-counter) {
+        background-color: var(--color-bg-ui-counter-hover);
+      }
     }
   }
 

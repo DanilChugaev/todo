@@ -16,9 +16,12 @@
       <slot />
     </span>
 
-    <span v-if="counter" class="ui-link__counter">
-      {{ counter }}
-    </span>
+    <ui-counter
+      v-if="counter"
+      class="ui-link__counter"
+      size="medium"
+      :counter="counter"
+    />
   </router-link>
 </template>
 
@@ -48,13 +51,9 @@ const hasIconSlot = slots.icon?.()[0].props;
 <style>
 :root {
   --color-bg-link-hover: rgb(235, 235, 235);
-  --color-bg-link-counter: rgb(235, 235, 235);
-  --color-bg-link-counter-hover: var(--color-bg-main);
 }
 html.dark-mode {
   --color-bg-link-hover: #444c56;
-  --color-bg-link-counter: #444c56;
-  --color-bg-link-counter-hover: var(--color-bg-main);
 }
 </style>
 
@@ -74,18 +73,13 @@ html.dark-mode {
   }
 
   &__counter {
-    display: flex;
     margin-left: auto;
-    padding: var(--spacer-a) var(--spacer-b);
-    border-radius: var(--border-radius-a);
-    background-color: var(--color-bg-link-counter);
-    transition: background-color 0.1s ease-in-out;
   }
 
   &--is-active {
     font-weight: var(--font-weight-bold);
 
-    .ui-link__counter {
+    .ui-counter {
       font-weight: var(--font-weight-normal);
     }
   }
@@ -95,8 +89,8 @@ html.dark-mode {
   &:focus {
     background-color: var(--color-bg-link-hover);
 
-    .ui-link__counter {
-      background-color: var(--color-bg-link-counter-hover);
+    .ui-counter {
+      background-color: var(--color-bg-ui-counter-hover);
     }
   }
 }

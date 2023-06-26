@@ -24,10 +24,10 @@ export enum PriorityLevel {
 }
 
 export enum PriorityColor {
-  urgent = 'rgba(245, 0, 0)',
-  high = 'rgba(255, 204, 0)',
-  normal = 'rgba(111, 221, 255)',
-  low = 'rgba(216, 216, 216)',
+  urgent = 'rgba(245,0,0,0.7)',
+  high = 'rgba(255,204,0,0.7)',
+  normal = 'rgba(111,221,255,0.7)',
+  low = 'rgba(216,216,216,0.7)',
 }
 
 export interface Priority {
