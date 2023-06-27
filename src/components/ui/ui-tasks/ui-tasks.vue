@@ -21,9 +21,9 @@
         <content class="list__content" :item="item" />
 
         <div class="list__actions">
-          удалить
           редактировать
-          мб в архив
+          в архив
+          удалить
         </div>
       </li>
     </ul>

@@ -1,20 +1,20 @@
 <template>
   <div class="content">
-    <div class="content__title">{{ item.title }}</div>
+    <div class="content__title-container">
+      <div class="content__title">{{ item.title }}</div>
+
+      <ui-icon
+        v-if="item.priority"
+        name="flag"
+        class="content__priority"
+        :title="item.priority.title"
+        :style="{
+          color: item.priority.color,
+        }"
+      />
+    </div>
 
     <ul v-if="hasInfo" class="content__info info">
-      <li v-if="item.priority" class="info__item">
-        <ui-icon
-          class="info__visual"
-          name="flag"
-          :style="{
-            color: item.priority.color,
-          }"
-        />
-
-        <span class="info__title">{{ item.priority.title }}</span>
-      </li>
-
       <li v-if="item.date" class="info__item">
         <ui-icon class="info__visual info__visual--calendar" name="calendar"/>
 
@@ -54,7 +54,6 @@ const props = defineProps({
 });
 
 const hasInfo = computed(() =>
-  props.item?.priority ||
   props.item?.date ||
   props.item?.subtasks?.length ||
   props.item?.list ||
@@ -64,9 +63,18 @@ const hasInfo = computed(() =>
 
 <style lang="scss" scoped>
 .content {
+  &__title-container {
+    display: flex;
+    align-items: center;
+  }
+
   &__title {
     font-size: var(--font-size-ui-size-large);
     line-height: 26px;
+  }
+
+  &__priority {
+    margin-left: var(--spacer-b);
   }
 
   &__info {
