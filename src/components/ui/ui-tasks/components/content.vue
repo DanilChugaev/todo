@@ -22,14 +22,13 @@
       </li>
 
       <li v-if="item.subtasks?.length" class="info__item">
-        <ui-counter class="info__visual info__visual--counter" :counter="item.subtasks.length" />
+        <ui-counter class="info__visual" :counter="item.subtasks.length" />
 
         <span class="info__title">Subtasks</span>
       </li>
 
       <li v-if="item.list" class="info__item">
-        <!-- тут компонент color-container будет -->
-        <span class="info__visual">{{ item.list.color }}</span>
+        <ui-color-container class="info__visual" :color="item.list.color" />
 
         <span class="info__title">{{ item.list.title }}</span>
       </li>
@@ -102,15 +101,11 @@ const hasInfo = computed(() =>
   }
 
   &__visual {
-    margin-right: var(--spacer-a);
+    margin-right: var(--spacer-b);
 
     &--calendar {
       position: relative;
       top: -1px;
-    }
-
-    &--counter {
-      margin-right: var(--spacer-b);
     }
   }
 }

@@ -1,3 +1,5 @@
+import { COLORS } from './ui-color-container/constants';
+
 export interface UiListItem {
   icon?: string;
   text: string;
@@ -10,3 +12,5 @@ export enum UiSize {
   medium = 'medium',
   large = 'large',
 }
+
+export type UiColor = keyof typeof COLORS;

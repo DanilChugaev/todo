@@ -1,6 +1,7 @@
 // @ts-nocheck
 import UiButton from '~/components/ui/ui-button';
 import UiCheckbox from '~/components/ui/ui-checkbox';
+import UiColorContainer from '~/components/ui/ui-color-container';
 import UiCounter from '~/components/ui/ui-counter';
 import UiIcon from '~/components/ui/ui-icon';
 import UiLink from '~/components/ui/ui-link';
@@ -13,6 +14,7 @@ declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     UiButton: typeof UiButton,
     UiCheckbox: typeof UiCheckbox,
+    UiColorContainer: typeof UiColorContainer,
     UiCounter: typeof UiCounter,
     UiIcon: typeof UiIcon,
     UiLink: typeof UiLink,
