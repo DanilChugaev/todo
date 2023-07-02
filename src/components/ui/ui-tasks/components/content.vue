@@ -9,7 +9,7 @@
         class="content__priority"
         :title="item.priority.title"
         :style="{
-          color: item.priority.color,
+          color: COLORS[PRIORITY_COLOR[item.priority.color]],
         }"
       />
     </div>
@@ -44,6 +44,8 @@
 <script lang="ts" setup>
 import { computed, PropType } from 'vue';
 import { Task } from '../types';
+import { PRIORITY_COLOR } from '../constants';
+import { COLORS } from '../../ui-color-container/constants';
 
 const props = defineProps({
   item: {

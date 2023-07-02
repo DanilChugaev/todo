@@ -2,6 +2,7 @@ import type { Meta, StoryObj } from '@storybook/vue3';
 
 import UiColorContainer from './index';
 import { COLORS } from './constants';
+import { UiColor } from '../types';
 
 const meta = {
   title: 'ui/color',
@@ -12,7 +13,7 @@ const meta = {
     color: {
       options: Object.keys(COLORS),
       control: 'select',
-      defaultValue: 'red_100',
+      defaultValue: UiColor.red_100,
     },
   },
 
@@ -23,7 +24,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    color: 'red_100',
+    color: UiColor.red_100,
   },
 };
 

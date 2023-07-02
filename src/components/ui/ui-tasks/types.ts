@@ -23,17 +23,10 @@ export enum PriorityLevel {
   low = 'low',
 }
 
-export enum PriorityColor {
-  urgent = 'rgba(245,0,0,0.7)',
-  high = 'rgba(255,204,0,0.7)',
-  normal = 'rgba(111,221,255,0.7)',
-  low = 'rgba(216,216,216,0.7)',
-}
-
 export interface Priority {
   id: PriorityLevel,
   title: string,
-  color: PriorityColor,
+  color: PriorityLevel,
 }
 
 export interface Task {

@@ -17,8 +17,6 @@ defineProps({
 
 <style lang="scss" scoped>
 .ui-color {
-  --ui-size: 24px;
-
   display: inline-block;
   width: var(--ui-size);
   height: var(--ui-size);

@@ -9,7 +9,8 @@
 <script lang="ts" setup>
 import { computed } from 'vue';
 import LayoutHeader from '~/components/layout/layout-header.vue';
-import { PriorityColor, PriorityLevel } from '~/components/ui/ui-tasks/types';
+import { PriorityLevel } from '~/components/ui/ui-tasks/types';
+import {UiColor} from '../components/ui/types';
 
 const items = computed(() => [
   {
@@ -24,7 +25,7 @@ const items = computed(() => [
     priority: {
       id: PriorityLevel.low,
       title: PriorityLevel.low,
-      color: PriorityColor[PriorityLevel.low],
+      color: PriorityLevel.low,
     },
   },
   {
@@ -46,7 +47,7 @@ const items = computed(() => [
     list: {
       id: 1,
       title: 'Home',
-      color: 'rgb(107,137,255)'
+      color: UiColor.pink_700,
     },
     tags: undefined,
     date: '22-09-23',
@@ -70,7 +71,7 @@ const items = computed(() => [
     priority: {
       id: PriorityLevel.high,
       title: PriorityLevel.high,
-      color: PriorityColor[PriorityLevel.high],
+      color: PriorityLevel.high,
     },
   },
   {
@@ -81,13 +82,13 @@ const items = computed(() => [
     list: {
       id: 2,
       title: 'Work',
-      color: 'rgb(255, 107, 107)'
+      color: 'deepPurple_100'
     },
     tags: [
       {
         id: 1,
         title: 'Tag 1',
-        color: 'rgb(107,255,119)'
+        color: 'blue_900'
       },
     ],
     date: undefined,
@@ -107,18 +108,18 @@ const items = computed(() => [
     list: {
       id: 2,
       title: 'Work',
-      color: 'rgb(255, 107, 107)'
+      color: UiColor.cyan_100,
     },
     tags: [
       {
         id: 1,
         title: 'Tag 1',
-        color: 'rgb(107,255,119)'
+        color: UiColor.cyan_900,
       },
       {
         id: 2,
         title: 'Tag 2',
-        color: 'rgb(213,107,255)'
+        color: UiColor.yellow_500,
       },
     ],
     date: '22-09-23',
@@ -132,7 +133,7 @@ const items = computed(() => [
     priority: {
       id: PriorityLevel.normal,
       title: PriorityLevel.normal,
-      color: PriorityColor[PriorityLevel.normal],
+      color: PriorityLevel.normal,
     },
   },
   {
@@ -147,7 +148,7 @@ const items = computed(() => [
     priority: {
       id: PriorityLevel.urgent,
       title: PriorityLevel.urgent,
-      color: PriorityColor[PriorityLevel.urgent],
+      color: PriorityLevel.urgent,
     },
   },
 ]);

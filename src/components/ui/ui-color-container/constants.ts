@@ -1,5 +1,7 @@
 // https://m2.material.io/design/color/the-color-system.html#tools-for-picking-colors
-export const COLORS = {
+import { UiColor } from '../types';
+
+export const COLORS: Record<keyof typeof UiColor, string>= {
   red_100: '#FFCDD2',
   red_300: '#E57373',
   red_500: '#F44336',
