@@ -82,13 +82,13 @@ const items = computed(() => [
     list: {
       id: 2,
       title: 'Work',
-      color: 'deepPurple_100'
+      color: UiColor.deepPurple_100,
     },
     tags: [
       {
         id: 1,
         title: 'Tag 1',
-        color: 'blue_900'
+        color: UiColor.blue_900,
       },
     ],
     date: undefined,

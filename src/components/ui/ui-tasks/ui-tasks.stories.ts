@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/vue3';
 
 import UiTasks from './index';
-import { PriorityColor, PriorityLevel } from './types';
+import { PriorityLevel } from './types';
 
 const meta = {
   title: 'ui/tasks',
@@ -41,7 +41,7 @@ export const Default: Story = {
         priority: {
           id: PriorityLevel.low,
           title: PriorityLevel.low,
-          color: PriorityColor[PriorityLevel.low],
+          color: PriorityLevel.low,
         },
       },
       {
@@ -87,7 +87,7 @@ export const Default: Story = {
         priority: {
           id: PriorityLevel.high,
           title: PriorityLevel.high,
-          color: PriorityColor[PriorityLevel.high],
+          color: PriorityLevel.high,
         },
       },
       {
@@ -149,7 +149,7 @@ export const Default: Story = {
         priority: {
           id: PriorityLevel.normal,
           title: PriorityLevel.normal,
-          color: PriorityColor[PriorityLevel.normal],
+          color: PriorityLevel.normal,
         },
       },
       {
@@ -164,7 +164,7 @@ export const Default: Story = {
         priority: {
           id: PriorityLevel.urgent,
           title: PriorityLevel.urgent,
-          color: PriorityColor[PriorityLevel.urgent],
+          color: PriorityLevel.urgent,
         },
       },
     ],
