@@ -63,8 +63,8 @@ const model = computed({
   }
 
   &__icon {
-    width: var(--ui-size);
-    height: calc(var(--ui-size) - 1px);
+    width: 24px;
+    height: 23px;
     border-radius: var(--border-radius-a);
     color: transparent;
   }
