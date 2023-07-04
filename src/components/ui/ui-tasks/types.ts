@@ -1,13 +1,10 @@
+import { Tag } from '../ui-tag/types';
+import { UiColor } from '../types';
+
 export interface List {
   id: string;
   title: string;
-  color: string;
-}
-
-export interface Tag {
-  id: string;
-  title: string;
-  color: string;
+  color: UiColor;
 }
 
 export interface Subtask {

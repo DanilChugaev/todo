@@ -12,7 +12,7 @@
   >
     <ui-icon v-if="icon" class="ui-button__icon" :name="icon"/>
 
-    <slot class="ui-button__content">кнопка</slot>
+    <slot v-if="$slots.default" class="ui-button__content"></slot>
   </button>
 </template>
 

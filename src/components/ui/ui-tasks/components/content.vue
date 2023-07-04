@@ -34,8 +34,7 @@
       </li>
 
       <li v-if="item.tags?.length" class="info__item">
-        <!-- тут компонент tags-container будет -->
-        <span>{{ item.tags }}</span>
+        <ui-tags-container :items="item.tags" />
       </li>
     </ul>
   </div>

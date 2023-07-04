@@ -7,6 +7,8 @@ import UiIcon from '~/components/ui/ui-icon';
 import UiLink from '~/components/ui/ui-link';
 import UiList from '~/components/ui/ui-list';
 import UiSwitch from '~/components/ui/ui-switch';
+import UiTag from '~/components/ui/ui-tag';
+import UiTagsContainer from '~/components/ui/ui-tags-container';
 import UiTasks from '~/components/ui/ui-tasks';
 // import UiInput from '~/components/ui/ui-input';
 
@@ -20,6 +22,8 @@ declare module '@vue/runtime-core' {
     UiLink: typeof UiLink,
     UiList: typeof UiList,
     UiSwitch: typeof UiSwitch,
+    UiTag: typeof UiTag,
+    UiTagsContainer: typeof UiTagsContainer,
     UiTasks: typeof UiTasks,
     // UiInput: typeof UiInput,
   }

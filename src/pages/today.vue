@@ -88,7 +88,7 @@ const items = computed(() => [
       {
         id: 1,
         title: 'Tag 1',
-        color: UiColor.blue_900,
+        color: UiColor.green_900,
       },
     ],
     date: undefined,
@@ -114,12 +114,12 @@ const items = computed(() => [
       {
         id: 1,
         title: 'Tag 1',
-        color: UiColor.cyan_900,
+        color: UiColor.purple_900,
       },
       {
         id: 2,
         title: 'Tag 2',
-        color: UiColor.yellow_500,
+        color: UiColor.gray_900,
       },
     ],
     date: '22-09-23',

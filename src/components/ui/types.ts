@@ -1,5 +1,3 @@
-import { COLORS } from './ui-color-container/constants';
-
 export interface UiListItem {
   icon?: string;
   text: string;

@@ -2,6 +2,7 @@ import type { Meta, StoryObj } from '@storybook/vue3';
 
 import UiTasks from './index';
 import { PriorityLevel } from './types';
+import { UiColor } from '../types';
 
 const meta = {
   title: 'ui/tasks',
@@ -63,7 +64,7 @@ export const Default: Story = {
         list: {
           id: 1,
           title: 'Home',
-          color: 'rgb(107,137,255)'
+          color: UiColor.pink_700,
         },
         tags: undefined,
         date: '22-09-23',
@@ -98,13 +99,13 @@ export const Default: Story = {
         list: {
           id: 2,
           title: 'Work',
-          color: 'rgb(255, 107, 107)'
+          color: UiColor.deepPurple_100,
         },
         tags: [
           {
-            id: 1,
+            id: '1',
             title: 'Tag 1',
-            color: 'rgb(107,255,119)'
+            color: UiColor.blue_900,
           },
         ],
         date: undefined,
@@ -124,18 +125,18 @@ export const Default: Story = {
         list: {
           id: 2,
           title: 'Work',
-          color: 'rgb(255, 107, 107)'
+          color: UiColor.cyan_100,
         },
         tags: [
           {
-            id: 1,
+            id: '1',
             title: 'Tag 1',
-            color: 'rgb(107,255,119)'
+            color: UiColor.cyan_900,
           },
           {
-            id: 2,
+            id: '2',
             title: 'Tag 2',
-            color: 'rgb(213,107,255)'
+            color: UiColor.yellow_500,
           },
         ],
         date: '22-09-23',
