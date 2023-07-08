@@ -4,7 +4,7 @@
       class="ui-tasks__new-task"
       size="large"
       icon="plus"
-      @click="$emit('addTask')"
+      @click="$emit('add')"
     >
       Add new task
     </ui-button>
@@ -21,9 +21,26 @@
         <content class="list__content" :item="item" />
 
         <div class="list__actions">
-          редактировать
-          в архив
-          удалить
+          <ui-button
+            class="ui-tasks__action"
+            icon="edit"
+            v-tooltip="'Редактировать'"
+            @click="$emit('edit')"
+          />
+          
+          <ui-button
+            class="ui-tasks__action"
+            icon="archive"
+            v-tooltip="'В архив'"
+            @click="$emit('archive')"
+          />
+          
+          <ui-button
+            class="ui-tasks__action"
+            icon="trash"
+            v-tooltip="'Удалить'"
+            @click="$emit('delete')"
+          />
         </div>
       </li>
     </ul>
@@ -42,7 +59,7 @@ defineProps({
   },
 });
 
-defineEmits(['addTask']);
+defineEmits(['add', 'edit', 'archive', 'delete']);
 
 // если таска просрочена то выводить у нее бэйджик что она просрочена
 // и предложить сменить дату реализации
@@ -52,6 +69,15 @@ defineEmits(['addTask']);
 .ui-tasks {
   &__new-task {
     width: 100%;
+  }
+
+  &__action {
+    & ::v-deep(.ui-icon) {
+      margin: 0;
+    }
+    & + .ui-tasks__action {
+      margin-left: var(--spacer-a);
+    }
   }
 }
 
@@ -73,6 +99,10 @@ defineEmits(['addTask']);
       & ::v-deep(.ui-counter) {
         background-color: var(--color-bg-ui-counter-hover);
       }
+
+      .list__actions {
+        display: flex;
+      }
     }
   }
 
@@ -81,9 +111,11 @@ defineEmits(['addTask']);
   }
 
   &__actions {
+    display: none;
     position: absolute;
     right: var(--spacer-d);
-    top: var(--spacer-c);
+    top: 50%;
+    transform: translateY(-50%);
   }
 }
 </style>
