@@ -47,7 +47,7 @@ defineProps({
   font-size: var(--font-size-ui-size-small);
 
   &__title {
-    color: white;
+    color: var(--color-white);
     mix-blend-mode: difference;
   }
 

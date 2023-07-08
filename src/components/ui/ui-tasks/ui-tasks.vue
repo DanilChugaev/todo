@@ -27,14 +27,14 @@
             v-tooltip="'Редактировать'"
             @click="$emit('edit')"
           />
-          
+
           <ui-button
             class="ui-tasks__action"
             icon="archive"
             v-tooltip="'В архив'"
             @click="$emit('archive')"
           />
-          
+
           <ui-button
             class="ui-tasks__action"
             icon="trash"
