@@ -45,6 +45,7 @@ function closeAside() {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: var(--spacer-d);
   }
 
   &__title {

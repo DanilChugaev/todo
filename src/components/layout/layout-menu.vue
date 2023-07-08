@@ -8,6 +8,7 @@
     ]"
   >
     <aside-header
+      class="layout-menu__header"
       title="Menu"
       :is-active-title="isActiveMenu"
       @click="toggleMenu"
@@ -86,8 +87,8 @@ function toggleMenu() {
   min-width: var(--width-menu-initial);
   height: 100%;
 
-  &__content {
-    margin-top: var(--spacer-d);
+  &__header {
+    margin-bottom: var(--spacer-d);
   }
 
   &__content,

@@ -1,13 +1,16 @@
 <template>
-  <div class="ui-tags-container">
-    <ui-tag
+  <ul class="ui-tags-container">
+    <li
       v-for="item in items"
       :key="item.id"
       class="ui-tags-container__item"
-      :item="item"
-      :isClosing="isClosing"
-    />
-  </div>
+    >
+      <ui-tag
+        :item="item"
+        :isClosing="isClosing"
+      />
+    </li>
+  </ul>
 </template>
 
 <script lang="ts" setup>
