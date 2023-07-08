@@ -6,6 +6,9 @@
     --color-text: #1F2328;
 
     --color-outline: rgb(25, 89, 204);
+
+    --color-white: #fff;
+    --color-black: #24292f;
 }
 
 html.dark-mode {
@@ -14,4 +17,7 @@ html.dark-mode {
     --color-bg-aside: var(--color-bg-menu);
 
     --color-text: #adbac7;
+
+    --color-white: #cdd9e5;
+    --color-black: #000;
 }

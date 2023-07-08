@@ -53,7 +53,7 @@ defineProps({
 }
 html.dark-mode {
   --color-bg-button: var(--color-bg-main);
-  --color-bg-button-hover: #444c56;
+  --color-bg-button-hover: #30363d; /* #444c56 */
   --color-bg-button-active: hsla(213,12%,27%,1);
 }
 </style>

@@ -3,6 +3,7 @@ import { Preview, setup } from '@storybook/vue3';
 import '../src/assets/scss/index.scss';
 import components from '../src/components';
 import Router from '../src/router';
+import directives from '../src/directives';
 
 const preview: Preview = {
   parameters: {
@@ -18,6 +19,10 @@ const preview: Preview = {
 };
 
 setup((app) => {
+  directives.forEach(directive => {
+    app.directive(directive.name, directive);
+  });
+
   components.forEach(component => {
     app.component(component.name, component.component);
   });

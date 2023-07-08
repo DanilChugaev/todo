@@ -2,7 +2,7 @@ import { createApp } from 'vue';
 import { createPinia } from 'pinia';
 import App from './App.vue';
 import Router from './router';
-import VFocus from './directives/v-focus';
+import directives from './directives';
 import toggleDarkMode from './functions/toggleDarkMode';
 import components from './components';
 
@@ -12,7 +12,9 @@ const pinia = createPinia();
 app.config.globalProperties.$basePath = import.meta.env.VITE_BASE_PATH;
 app.provide('toggleDarkMode', toggleDarkMode());
 
-app.directive(VFocus.name, VFocus);
+directives.forEach(directive => {
+  app.directive(directive.name, directive);
+});
 
 components.forEach(component => {
   app.component(component.name, component.component);

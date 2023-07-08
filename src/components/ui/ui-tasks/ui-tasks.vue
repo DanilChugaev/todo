@@ -14,7 +14,7 @@
         v-for="item in items"
         :key="item.id"
         class="list__item"
-        :title="item.description"
+        v-tooltip="item.description"
       >
         <ui-checkbox v-model="item.isCompleted" class="list__checkbox" />
 
