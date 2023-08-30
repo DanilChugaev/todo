@@ -1,5 +1,5 @@
 <template>
-  <list-wrapper class="ui-list" :title="title">
+  <ui-field class="ui-list" :title="title">
     <ul class="ui-list__container">
       <li
         v-for="item in items"
@@ -23,13 +23,12 @@
         </ui-link>
       </li>
     </ul>
-  </list-wrapper>
+  </ui-field>
 </template>
 
 <script lang="ts" setup>
 import { PropType } from 'vue';
 import { UiListItem } from '../types';
-import ListWrapper from '../components/list-wrapper.vue';
 
 defineProps({
   title: {

@@ -3,6 +3,7 @@ import UiButton from '~/components/ui/ui-button';
 import UiCheckbox from '~/components/ui/ui-checkbox';
 import UiColorContainer from '~/components/ui/ui-color-container';
 import UiCounter from '~/components/ui/ui-counter';
+import UiField from '~/components/ui/ui-field';
 import UiIcon from '~/components/ui/ui-icon';
 import UiLink from '~/components/ui/ui-link';
 import UiList from '~/components/ui/ui-list';
@@ -17,6 +18,7 @@ export default [
   { name: 'ui-checkbox', component: UiCheckbox },
   { name: 'ui-color-container', component: UiColorContainer },
   { name: 'ui-counter', component: UiCounter },
+  { name: 'ui-field', component: UiField },
   { name: 'ui-icon', component: UiIcon },
   { name: 'ui-link', component: UiLink },
   { name: 'ui-list', component: UiList },

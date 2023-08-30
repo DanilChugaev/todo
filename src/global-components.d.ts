@@ -3,6 +3,7 @@ import UiButton from '~/components/ui/ui-button';
 import UiCheckbox from '~/components/ui/ui-checkbox';
 import UiColorContainer from '~/components/ui/ui-color-container';
 import UiCounter from '~/components/ui/ui-counter';
+import UiField from '~/components/ui/ui-field';
 import UiIcon from '~/components/ui/ui-icon';
 import UiLink from '~/components/ui/ui-link';
 import UiList from '~/components/ui/ui-list';
@@ -18,6 +19,7 @@ declare module '@vue/runtime-core' {
     UiCheckbox: typeof UiCheckbox,
     UiColorContainer: typeof UiColorContainer,
     UiCounter: typeof UiCounter,
+    UiField: typeof UiField,
     UiIcon: typeof UiIcon,
     UiLink: typeof UiLink,
     UiList: typeof UiList,

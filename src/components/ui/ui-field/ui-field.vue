@@ -1,11 +1,11 @@
 <template>
-  <div class="list-wrapper">
-    <h3
+  <div class="ui-field">
+    <component :is="(tag as string)"
       v-if="title"
-      class="list-wrapper__title"
+      class="ui-field__title"
     >
       {{ title }}
-    </h3>
+    </component>
 
     <slot />
   </div>
@@ -17,11 +17,15 @@ defineProps({
     type: String,
     default: '',
   },
+  tag: {
+    type: String,
+    default: 'h3',
+  },
 });
 </script>
 
 <style lang="scss" scoped>
-.list-wrapper {
+.ui-field {
   &__title {
     font-size: 18px;
     margin-bottom: var(--spacer-c);
